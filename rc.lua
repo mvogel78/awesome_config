@@ -281,6 +281,8 @@ root.buttons(awful.util.table.join(
 
 -- {{{ Key bindings
 globalkeys = awful.util.table.join(
+   awful.key({ }, "#122", function () awful.util.spawn("amixer -D pulse sset Master 5%-") end),
+   awful.key({ }, "#123", function () awful.util.spawn("amixer -D pulse sset Master 5%+") end),
    awful.key({ "Control", "Shift"  }, "space", function () kbdcfg.switch() end),
    awful.key({ modkey,           }, "s",      hotkeys_popup.show_help,
       {description="show help", group="awesome"}),
